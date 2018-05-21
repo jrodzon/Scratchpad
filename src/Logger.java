@@ -11,6 +11,7 @@ public class Logger {
 
     public void log(Operation operation, String line){
         this.writer.println((new Date()).toString() + ", operation: " + operation.toString() + ", difference: " + line);
+        this.writer.flush();
     }
 
     public void closeLogger(){

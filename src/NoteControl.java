@@ -31,12 +31,15 @@ public class NoteControl {
                         System.out.println("You can't redo without making undo.");
                     }
                     break;
+                case "p":
+                    note.printNote();
+                    break;
                 case "q":
                     System.out.println("Bye.");
                     note.close();
                     return;
                 default:
-                    System.out.println("Unrecognised operation try: a to addLine, z to undo, y to redo.");
+                    System.out.println("Unrecognised operation try: a to addLine, z to undo, y to redo, p to print, q to quit.");
             }
         }
     }
